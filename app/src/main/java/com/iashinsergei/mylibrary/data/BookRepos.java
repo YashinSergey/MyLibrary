@@ -18,7 +18,7 @@ public class BookRepos {
         bookList.add(new Book("historical fiction","Margaret Mitchell","","Gone with the Wind",1936));
     }
 
-    private static BookRepos getInstance() {
+    public static BookRepos getInstance() {
         if (instance == null) {
             instance = new BookRepos();
         }
