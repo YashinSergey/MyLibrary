@@ -1,4 +1,4 @@
-package com.iashinsergei.mylibrary.data.entity;
+package com.iashinsergei.mylibrary.model.entity;
 
 public class Book {
 

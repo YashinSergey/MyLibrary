@@ -1,6 +1,6 @@
-package com.iashinsergei.mylibrary.data;
+package com.iashinsergei.mylibrary.model;
 
-import com.iashinsergei.mylibrary.data.entity.Book;
+import com.iashinsergei.mylibrary.model.entity.Book;
 
 import java.util.ArrayList;
 import java.util.List;
