@@ -13,9 +13,9 @@ public class BookRepos {
 
     private BookRepos() {
         bookList = new ArrayList<>();
-        bookList.add(new Book("war novel","Erich Maria Remarque","","Three Comrades",1936));
-        bookList.add(new Book("drama","William Shakespeare","","Hamlet",1602));
-        bookList.add(new Book("historical fiction","Margaret Mitchell","","Gone with the Wind",1936));
+        bookList.add(new Book("war novel","Erich Maria Remarque","","Three Comrades", "",1,1936));
+        bookList.add(new Book("drama","William Shakespeare","", "Hamlet","", 1, 1602));
+        bookList.add(new Book("historical fiction","Margaret Mitchell","","Gone with the Wind","", 1, 1936));
     }
 
     public static BookRepos getInstance() {
