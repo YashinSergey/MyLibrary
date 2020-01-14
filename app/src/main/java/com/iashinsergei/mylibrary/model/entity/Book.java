@@ -2,6 +2,7 @@ package com.iashinsergei.mylibrary.model.entity;
 
 public class Book {
 
+    private int id;
     private String genre;
     private String author;
     private String seriesName;
@@ -12,7 +13,8 @@ public class Book {
 
 
 
-    public Book(String genre, String author, String seriesName, String name, String description, int seriesNumber, int year) {
+    public Book(int id, String genre, String author, String seriesName, String name, String description, int seriesNumber, int year) {
+        this.id = id;
         this.genre = genre;
         this.author = author;
         this.seriesName = seriesName;
