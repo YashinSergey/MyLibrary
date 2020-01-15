@@ -1,9 +1,11 @@
 package com.iashinsergei.mylibrary.ui.adapters;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,9 +18,11 @@ import java.util.List;
 public class RvHomeAdapter extends RecyclerView.Adapter<RvHomeAdapter.HomeViewHolder> {
 
     private List<Book> bookList;
+    private Context context;
 
-    public RvHomeAdapter(List<Book> bookList) {
+    public RvHomeAdapter(List<Book> bookList, Context context) {
         this.bookList = bookList;
+        this.context = context;
     }
 
     @NonNull
@@ -29,8 +33,14 @@ public class RvHomeAdapter extends RecyclerView.Adapter<RvHomeAdapter.HomeViewHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull HomeViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull HomeViewHolder holder, final int position) {
         holder.bind(bookList.get(position));
+        holder.title.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, bookList.get(position).getName(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
