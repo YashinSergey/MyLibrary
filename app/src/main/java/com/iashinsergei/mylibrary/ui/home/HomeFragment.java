@@ -31,7 +31,7 @@ public class HomeFragment extends Fragment {
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         RecyclerView recyclerView = view.findViewById(R.id.rv_home);
         recyclerView.setLayoutManager(layoutManager);
-        RvHomeAdapter adapter = new RvHomeAdapter(BookRepos.getInstance().getBookList());
+        RvHomeAdapter adapter = new RvHomeAdapter(BookRepos.getInstance().getBookList(), getContext());
         recyclerView.setAdapter(adapter);
     }
 }
